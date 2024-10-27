@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Container Style */
+.container {
+    width: 100%;
+    padding-right: 13px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 855px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.follow-me {
+    display: flex;
+    justify-content: start;
+}
+
+.follow-me img {
+    margin-top: 10px;
+    object-fit: cover;
+    width: 50px;
+    height: auto;
+}
+
+.follow-me .fb {
+    margin-bottom: 5px;
+    width: auto;
+    height: 45px;
+}
+
+.bhs {
+    display: flex;
+    justify-content: center;
+}
+
+.bhs img {
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    background-color: #C9EEFF;
+    padding: 25px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-brand a {
+    color: black;
+
+}
+
+.navbar-collaps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#active {
+    color: #AA77FF;
+    font-size: 15px;
+}
+
+.menu-item {
+    padding-left: 40px;
+    list-style: none;
+
+}
+
+.menu-item a {
+    color: black;
+    transition: font-size 0.5s;
+}
+
+.menu-item a:hover {
+    color: #AA77FF;
+    font-size: 15px;
+}
+
+.logout a {
+    justify-content: end;
+}
+
+.contact {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    animation-name: spear;
+    animation-duration: 4s;
+}
+
+.contact img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 3/2;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    margin-top: 110px;
+    animation-name: spear;
+    animation-duration: 4s;
+}
+
+@keyframes spear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64vh;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #000;
+    border-left: 5px solid #AA77FF;
+    align-items: center;
+}
+
+.card-body {
+    align-items: center;
+}
+
+.card-img {
+    border-radius: 100%;
+    width: 100px;
+    height: auto;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btn {
+    padding: 5px;
+    border: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-violet {
+    background-color: #AA77FF;
+}
+
+.btn-violet:hover {
+    color: #b6b4b4;
+    background-color: rgb(118, 36, 196);
+    cursor: pointer;
+}
+
+.breadcumb {
+    margin-bottom: 20px;
+    font-style: bold;
+}
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 48px;
+    text-align: center;
+    background-color: #C9EEFF;
+    margin-top: 20px;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 875px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

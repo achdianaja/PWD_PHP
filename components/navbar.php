@@ -1,8 +1,10 @@
 <!-- start navbar -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
     <div class="navbar-collaps">
         <div class="navbar-brand">
-            <h1><a href="home.html">A</a></h1>
+            <button class="btn btn-violet" onclick="mode()">
+                <span id="text">light</span>
+            </button>
         </div>
 
         <div class="menu">
@@ -16,8 +18,7 @@
         </div>
 
         <div class="logout">
-            <button onclick="logout()">Logout</button>
-            <!-- <a href="../index.php" class="" o  nclick="logout()"><p id="getName"></p>| Logout</a> -->
+            <button onclick="logout()" class="btn btn-violet">Logout</button>
         </div>
     </div>
 </nav>

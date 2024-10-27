@@ -84,7 +84,7 @@ a{
 }
 
 .navbar {
-    background-color: #C9EEFF;
+    background-color: azure;
     padding: 25px;
     margin-bottom: 20px;
     position: sticky;
@@ -121,7 +121,7 @@ a{
 }
 
 .menu-item a {
-    color: black;
+    color: inherit;
     transition: font-size 0.5s;
 }
 
@@ -181,7 +181,7 @@ a{
 }
 
 .card {
-    background-color: white;
+    /* background-color: white; */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -210,7 +210,7 @@ a{
 }
 
 .btn {
-    padding: 5px;
+    padding: 10px;
     border: none;
     font-size: 15px;
     color: white;
@@ -249,7 +249,7 @@ a{
 .footer {
     padding: 48px;
     text-align: center;
-    background-color: #C9EEFF;
+    background-color: azure;
     margin-top: 20px;
 }
 

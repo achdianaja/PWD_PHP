@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" id="footer">
     <div class="container">
         <ul>
             <li class="menu-item"><a href="../contents/home.php" id="<?php echo ($title == "Home" ? "active" : "") ?>">Home</a></li>
@@ -12,24 +12,8 @@
     </div>
 </div>
 
-<script>
-    const storedName = window.localStorage.getItem('name');
-    
-    if (storedName) {
-        document.getElementById('getName').innerText = storedName;
-    } else {
-        document.getElementById('getName').innerText = "Nama tidak ditemukan!";
-    }
-
-    
-    function logout(){
-        // var logout = window.localStorage.removeItem('name');
-        alert("berhasil logout");
-        window.location.href = "../index"
-        console.log("berhasil di hapus");
-    
-    }
-</script>
+<script src="../public/js/getUsers.js"></script>
+<script src="../public/js/darkMode.js"></script>
 </body>
 
 </html>

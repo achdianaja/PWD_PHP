@@ -17,9 +17,10 @@ include '../components/head.php';
     }
 </style>
 
-<div class="header">
+<div class="header" id="header">
     <h1>Welcome to My Personal Web</h1>
     <p>explore and enjoy</p>
+    <div> Selamat datang <strong id="getName"></strong></div>
 </div>
 
 <?php include '../components/navbar.php'; ?>
@@ -31,29 +32,34 @@ include '../components/head.php';
                 <h2>Bahasa Pemrograman</h2>
                 <h5>Oct 10, 2024</h5>
                 <div class="bhs">
-                    <img src="../public/images/java.png" alt="">
-                    <img src="../public/images/c++.png" alt="">
+                    <img src="../public/images/java.png" alt="Java" class="modal-img" data-text="Java is a high-level programming language." data-src="../public/images/java.png">
+                    <img src="../public/images/c++.png" alt="C++" class="modal-img" data-text="C++ is an object-oriented programming language." data-src="../public/images/c++.png">
                 </div>
                 <p><strong>Java Dan C++</strong></p>
-                <p>Kedua bahasa Pemrograman diatas adalah bahasa yang saya pelajari selama 2 semester di Universitas
-                    Langlangbuana dan hingga saat ini saya memahaminya</p>
+                <p>Kedua bahasa Pemrograman diatas adalah bahasa yang saya pelajari selama 2 semester di Universitas Langlangbuana dan hingga saat ini saya memahaminya.</p>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img id="modalImage" src="" alt="" style="width: 50%;">
+                        <p id="modalText"></p>
+                    </div>
+                </div>
             </div>
             <div class="card">
                 <h2>HTML & CSS</h2>
                 <h5>Oct 10, 2024</h5>
                 <div class="bhs">
-                    <img src="../public/images/html.png" alt="">
-                    <img src="../public/images/css.png" alt="">
+                    <img src="../public/images/html.png" alt="HTML" class="modal-img" data-text="HTML is the standard markup language for creating web pages." data-src="../public/images/html.png">
+                    <img src="../public/images/css.png" alt="CSS" class="modal-img" data-text="CSS is a style sheet language used for describing the presentation of a document." data-src="../public/images/css.png">
                 </div>
-                <p>Saat ini saya sedang belajar menggunakan html dan css untuk membangun tampilan web yang menarik
-                </p>
+                <p>Saat ini saya sedang belajar menggunakan html dan css untuk membangun tampilan web yang menarik.</p>
             </div>
         </div>
         <div class="rightcolumn">
             <div class="card">
                 <h2>About Me</h2>
-                <p>Achdian Fahrul Rizki atau biasa dipanggil Iki oleh orang-orang di sekitarnya dikenal memiliki
-                    hobi ngetik buku dan bermain futsal. Saya lahir... <a href="about.html">Selengkapnya</a></p>
+                <p>Achdian Fahrul Rizki atau biasa dipanggil Iki oleh orang-orang di sekitarnya dikenal memiliki hobi ngetik buku dan bermain futsal. Saya lahir... <a href="about.html">Selengkapnya</a></p>
             </div>
             <div class="card">
                 <h3>My Schedule</h3>
@@ -87,15 +93,40 @@ include '../components/head.php';
             <div class="card">
                 <h3>Follow Me</h3>
                 <div class="follow-me">
-                    <img src="../public/images/whatsapp.png" alt="">
-                    <img src="../public/images/instagram.png" alt="">
-                    <img src="../public/images/facebook.png" class="fb" alt="">
+                    <img src="../public/images/whatsapp.png" alt="WhatsApp">
+                    <img src="../public/images/instagram.png" alt="Instagram">
+                    <img src="../public/images/facebook.png" class="fb" alt="Facebook">
                 </div>
                 <p style="margin-top: 20px;"><a href="contact.html" class="btn btn-violet">Contact me</a></p>
             </div>
         </div>
     </div>
-
 </main>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var modalImage = document.getElementById("modalImage");
+    var modalText = document.getElementById("modalText");
+    var span = document.getElementsByClassName("close")[0];
+
+    var images = document.getElementsByClassName("modal-img");
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function() {
+            modal.style.display = "block";
+            modalImage.src = this.getAttribute('data-src');
+            modalText.innerHTML = this.getAttribute('data-text');
+        }
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 <?php include '../components/footer.php'; ?>
